@@ -1,0 +1,35 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+{{user.username}}´s site
+{% endblock %}
+
+{% block name %}Community posts{% endblock %}
+
+
+
+{% block content %}
+<style>
+    #post{
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(45, 45, 200);
+    }
+</style>
+
+    <div>
+        {% for post in object_list %}
+            {{ post.post_date }}, by {{ post.author}} <br>
+            <a id="post" href="{% url 'article-detail' post.pk %}"> 
+                {{post.title }} </a> <br> {{ post.snippet }}
+            <br>
+          
+            
+            <br><br/>
+        
+        {% endfor%}
+
+        
+    </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "main/base.html" %}
+
+{% block title %}Add blog post{% endblock %}
+
+
+{% block name %}
+
+<h2>Add post...</h2>
+
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    
+    <h6>Considerations:</h6>
+    <li>Image dimensions:  Width: 700, Height: 525</li>
+    <br>
+    <div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <button class="btn btn-secondary">Post</button>
+    </div>
+
+    <script>
+        var name = "{{ user.id }}";
+        document.getElementById("elder").value = name;
+
+    </script>
+    </form>
+{% else %}
+You need permissions.
+{% endif %}
+{{ post.body }}
+
+<br></br>
+<a href="{% url 'view' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}
+
+

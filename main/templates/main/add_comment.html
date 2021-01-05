@@ -1,0 +1,34 @@
+{% extends "main/base.html" %}
+
+{% block title %}Add comment on post{% endblock %}
+
+
+{% block name %}
+
+<h2>Add comment...</h2>
+
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    
+    <h6>Considerations:</h6>
+    <li>Image dimensions:  Width: 700, Height: 525</li>
+    <br>
+    <div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-secondary">Add Comment</button>
+    </div>
+
+    
+    </form>
+
+{{ post.body }}
+
+<br></br>
+<a href="{% url 'view' %}" class="btn btn-secondary">Back</a>
+{% endif %}
+{% endblock %}
+

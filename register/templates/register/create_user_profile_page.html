@@ -1,0 +1,37 @@
+{% extends "main/base.html" %}
+
+{% block title %}Cerate a New Profile Page{% endblock %}
+
+
+{% block name %}
+
+<h2>Cerate a New Profile Page</h2>
+
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    
+    <h6>Considerations:</h6>
+    <li>Image dimensions:  Width: 700, Height: 525</li>
+    <br>
+    <div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-secondary">Create Profile Page</button>
+    </div>
+
+    
+    </form>
+{% else %}
+You need permissions.
+{% endif %}
+{{ post.body }}
+
+<br></br>
+<a href="{% url 'view' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}
+
+

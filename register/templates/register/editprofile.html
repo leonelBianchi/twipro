@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% block title %}Edit profile{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block name %}Edit Settings{% endblock %}
+
+
+{% block content%}
+
+{{ user.profile.bio }}
+
+<form method="POST", class="form-group">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="sumbit" class="btn btn-success">Update Pofile</button>
+</form>
+{% endblock %}
