@@ -5,30 +5,30 @@ Website for everybody who wants to show projects, posts, writings, thoughts, exp
 -process-
 
 Project-
-Django basics including HTML template importing, Database migration, Database fetching, Login and registration, admin panel(auto in django), profile page, posts and comments section and more.
+Django basics including HTML template importing, Database migration, Database fetching, Login and registration, admin panel(auto in django), profile page, posts and comments section and more.<br>
 
-main project is "main"
-rest there are apps-
-accounts(for login and logout)
-templates(for storing HTML pages)
-media(for saving uploaded images)
-static(for keeping static contact like img, css and js)
+main project is "main"<br>
+rest there are apps-<br>
+accounts(for login and logout)<br>
+templates(for storing HTML pages)<br>
+media(for saving uploaded images)<br>
+static(for keeping static contact like img, css and js)<br>
 
-Database used-
-SQLite
+Database used-<br>
+SQLite<br>
 
-INFO-
-all main fiels are inside main directory as it is main project
-urls.py- for all rotuing
-settings.py- for all settings
+INFO-<br>
+all main fiels are inside main directory as it is main project<br>
+urls.py- for all rotuing<br>
+settings.py- for all settings<br>
 
 
-running project-
-create a virtual env for django (using Anaconda, for example)
-open cmd and go to project directory
-for running server-  python manage.py runserver
+running project-<br>
+create a virtual env for django (using Anaconda, for example)<br>
+open cmd and go to project directory<br>
+for running server-  python manage.py runserver<br>
 
-URLs-
-home- http://127.0.0.1:8000/home/
-login- http://127.0.0.1:8000/login/
-register- http://127.0.0.1:8000/register/
+URLs-<br>
+home- http://127.0.0.1:8000/home/<br>
+login- http://127.0.0.1:8000/login/<br>
+register- http://127.0.0.1:8000/register/<br>
